@@ -1,6 +1,5 @@
 from aiogram import F, Router
 from aiogram.types import Message
-from start import Bot
 
 router = Router()
 
@@ -48,11 +47,11 @@ async def document(message: Message, bot: Bot):
     document = message.document
     file_id = document.file_id
 
-    file = await bot.get_file(file_id)
+    file = await message.bot.get_file(file_id)
     file_path = file.file_path
 
     local_path = f'downoloads/{document.file_name}'
 
-    await bot.download_file(file_path=file_path, destination=local_path)
+    await message.bot.download_file(file_path=file_path, destination=local_path)
 
     await message.answer("Файл сохранен")
