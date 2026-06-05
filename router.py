@@ -1,4 +1,4 @@
-from .hendlers import router
+from hendlers import router
 from aiogram import F
 from aiogram.types import Message
 from start import Bot
