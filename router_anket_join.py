@@ -1,13 +1,12 @@
 from aiogram.fsm.context import FSMContext
-from aiogram import F
-from hendlers import router
+from aiogram import F, Router
 from anket import Join
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
 from basadata import create_join
 
-
+router = Router()
 @router.message(Command("cansel"))
 async def cansel(message: Message, state: FSMContext):
     await state.clear()
