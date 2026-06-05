@@ -1,6 +1,5 @@
 from aiogram.fsm.context import FSMContext
-from aiogram import F
-from hendlers import router
+from aiogram import F, Router
 from anket import Order
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
@@ -8,7 +7,7 @@ from aiogram.types import Message, CallbackQuery
 from basadata import create_orders
 import os
 
-
+router = Router()
 chat_id = os.getenv("ID") 
 
 
