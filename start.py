@@ -16,13 +16,13 @@ bot_token = os.getenv("TOKEN")
 
 
 dp = Dispatcher()
-   dp.include_routers(
+dp.include_routers(
        hendlers_router,
        anket_router,
        join_router,
        media_router
    )
-
+   
 async def handle(request):
     return web.Response(text="Bot is running!")
    
