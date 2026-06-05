@@ -1,11 +1,11 @@
 from aiogram.fsm.context import FSMContext
 from aiogram import F
-from main.hendlers import router
-from forms.anket import Order
+from hendlers import router
+from anket import Order
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
-from basadata.basadate import create_orders
+from basadate import create_orders
 import os
 
 
