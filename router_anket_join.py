@@ -1,11 +1,11 @@
 from aiogram.fsm.context import FSMContext
 from aiogram import F
-from main.hendlers import router
-from forms.anket import Join
+from hendlers import router
+from anket import Join
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
-from basadata.basadate import create_join
+from basadate import create_join
 
 
 @router.message(Command("cansel"))
