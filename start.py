@@ -2,7 +2,10 @@ import asyncio
 import os
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
-from hendlers import router
+from hendlers import router as hendlers_router
+from rouetr_anket import router as anket_router
+from router_anket_join import router as join_router
+from router import router as media_router
 from basadata import init_db, init_db2
 import sys
 from aiohttp import web
@@ -13,8 +16,12 @@ bot_token = os.getenv("TOKEN")
 
 
 dp = Dispatcher()
-dp.include_router(router)
-
+   dp.include_routers(
+       hendlers_router,
+       anket_router,
+       join_router,
+       media_router
+   )
 
 async def handle(request):
     return web.Response(text="Bot is running!")
