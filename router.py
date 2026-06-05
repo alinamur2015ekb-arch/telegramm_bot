@@ -43,7 +43,7 @@ async def animation(message: Message):
 
 
 @router.message(F.document)
-async def document(message: Message, bot: Bot):
+async def document(message: Message):
     document = message.document
     file_id = document.file_id
 
