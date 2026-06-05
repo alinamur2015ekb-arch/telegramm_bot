@@ -5,7 +5,7 @@ from anket import Join
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
-from basadate import create_join
+from basadata import create_join
 
 
 @router.message(Command("cansel"))
