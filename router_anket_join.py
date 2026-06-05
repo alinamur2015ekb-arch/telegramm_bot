@@ -13,7 +13,7 @@ async def cansel(message: Message, state: FSMContext):
     await message.answer("Анкета удалена")
 
 
-@router.callback_query(lambda c: c.data == 'join_team')
+@router.callback_query(F.data == 'join_team')
 async def my_projekt(callback: CallbackQuery, state: FSMContext):
     await callback.message.answer("Заполните анкету. Чтобы удалить воспользуйтесь командой /cansel")
     await callback.message.answer("Введите ваше имя")
