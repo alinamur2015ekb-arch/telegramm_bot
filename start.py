@@ -3,7 +3,7 @@ import os
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
 from hendlers import router
-from basadate import init_db, init_db2
+from basadata import init_db, init_db2
 import sys
 from aiohttp import web
    
