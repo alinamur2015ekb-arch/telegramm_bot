@@ -1,7 +1,8 @@
-from hendlers import router
-from aiogram import F
+from aiogram import F, Router
 from aiogram.types import Message
 from start import Bot
+
+router = Router()
 
 @router.message(F.photo)
 async def photo(message: Message):
