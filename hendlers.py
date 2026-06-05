@@ -1,11 +1,11 @@
 from aiogram import Router, F
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
-from .keyboard import main, projekt
-from basadata.basadate import get_orders
+from keyboard import main, projekt
+from basadate import get_orders
 from dotenv import load_dotenv
 import os
-from forms.anket import Keyn
+from anket import Keyn
 from aiogram.fsm.context import FSMContext
 
 router = Router()
