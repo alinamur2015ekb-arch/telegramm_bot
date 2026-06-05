@@ -34,13 +34,12 @@ async def telegram_bots_handler(message: Message):
 
 
 @router.callback(F.data == "my_projekt")
-async def telegram_bots_handler(message: Message): 
+async def telegram_bots_handler(callback: CallbackQuery): 
     await callback.message.reply(
         "Мои проекты",
         reply_markup=projekt,
         parse_mode="HTML"
     )
-
 
 @router.message(F.text == "Telegramm игры")
 async def telegram_games_handler(message: Message): 
