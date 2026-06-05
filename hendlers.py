@@ -33,9 +33,9 @@ async def telegram_bots_handler(message: Message):
     )
 
 
-@router.message(F.text == "my_projekt")
+@router.callback(F.data == "my_projekt")
 async def telegram_bots_handler(message: Message): 
-    await message.reply(
+    await callback.message.reply(
         "Мои проекты",
         reply_markup=projekt,
         parse_mode="HTML"
