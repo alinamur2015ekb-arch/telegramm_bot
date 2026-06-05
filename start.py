@@ -2,12 +2,13 @@ import asyncio
 import os
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
-from main.hendlers import router
-from basadata.basadate import init_db, init_db2
+from hendlers import router
+from basadate import init_db, init_db2
 import sys
 from aiohttp import web
    
-
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+   
 load_dotenv()
 
 bot_token = os.getenv("TOKEN") 
