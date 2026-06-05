@@ -17,7 +17,7 @@ async def cansel(message: Message, state: FSMContext):
     await message.answer("Анкета удалена")
 
 
-@router.callback_query(lambda c: c.data == 'place_order')
+@router.callback_query(F.data == 'place_order')
 async def my_projekt(callback: CallbackQuery, state: FSMContext):
     await callback.message.answer("Заполните анкету. Чтобы удалить анкету воспользуйтесь командой /cansel")
     await callback.message.answer("Введите ТЗ заказа")
