@@ -25,19 +25,20 @@ async def start_handler(message: Message):
         parse_mode="HTML"
     )
 
+@router.callback_query(F.data == "my_projekt")
+async def my_projekt_handler(callback: CallbackQuery):
+    await callback.message.reply(
+        "Мои проекты",
+        reply_markup=projekt,
+        parse_mode="HTML"
+    )
+    await callback.answer()
+
+
 @router.message(F.text == "Telegramm боты")
 async def telegram_bots_handler(message: Message): 
     await message.reply(
         "Магазин проектов: @shop_programmist_bot",
-        parse_mode="HTML"
-    )
-
-
-@router.callback(F.data == "my_projekt")
-async def telegram_bots_handler(callback: CallbackQuery): 
-    await callback.message.reply(
-        "Мои проекты",
-        reply_markup=projekt,
         parse_mode="HTML"
     )
 
